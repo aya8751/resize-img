@@ -1,13 +1,10 @@
-/* .glyphicon {
-  font-size: 50px;
-} */
-
 .wrapper{
   background: #fff;
   border-radius: 9px;
   padding: 30px;
-  width: 450px;
+  width: 400px;
 }
+/* upload-box style start */
 .upload-box{
   height: 225px;
   border: 2px dashed #afafaf;
@@ -42,10 +39,12 @@
   object-fit: cover;
   border-radius: 5px;
 }
+/* upload-box style end */
+
+/* content style start */
 .wrapper .content{
   margin-top: 28px;
 }
-
 .wrapper .content .row{
   display: flex;
   justify-content: space-between;
@@ -101,3 +100,4 @@
   margin: 30px 0 10px;
   cursor: pointer;
 }
+/* content style end */

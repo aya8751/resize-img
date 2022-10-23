@@ -1,24 +1,34 @@
 <div class="wrapper">
+  <!-- upload box start -->
   <div class="upload-box" (click)="uploadImg(fileInput)" >
-    <div class=""></div>
+    <!-- input to load image -->
     <input type="file" accept="image/*" #fileInput  (change)="onLoading($event)">
+    <!-- hide it if image loaded -->
     <div class="container" *ngIf="!imageloded">
       <span class="glyphicon glyphicon-cloud-upload fa-lg" aria-hidden="true"></span>
      <p>Browse File to upload</p>
     </div>
+    <!-- to view loaded image -->
     <img *ngIf="imageloded" #image [src]="viewImgUrl" (load)="imgLoad(image)" >
   </div>
+  <!-- upload box end -->
+
+  <!-- content start -->
   <div class="content">
+    <!-- size inputs start -->
     <div class="row sizes">
       <div class="column width">
         <label>Width</label>
-        <input type="number" [value]="ImgWidth" #Width (keyup)="gettingHeight(ratioInput, Width.value)">
+        <input type="number" [(ngModel)]="ImgWidth" (keyup)="gettingHeight(ratioInput)">
       </div>
       <div class="column height">
         <label>Height</label>
-        <input #Height type="number" [value]="ImgHeight" (keyup)="gettingWidth(ratioInput, Height.value)">
+        <input type="number"  [(ngModel)]="ImgHeight" (keyup)="gettingWidth(ratioInput)">
       </div>
     </div>
+    <!-- size inputs end -->
+
+    <!-- checkboxes inputs start -->
     <div class="row checkboxes">
       <div class="column ratio">
         <input type="checkbox" id="ratio" #ratioInput checked>
@@ -29,12 +39,14 @@
         <label for="quality">Reduce quality</label>
       </div>
     </div>
+    <!-- checkboxes inputs end -->
+    <!-- button to load img -->
     <button class="dowaload" (click)="resizeAndDownload(myCanvas, qualityInput)">
-
       Download Image
     </button>
+    <!-- to creat canvas from image -->
     <canvas #myCanvas hidden></canvas>
-    <!-- <a *ngIf="imageloded" [href]="href"[download]="download" hidden></a> -->
   </div>
+    <!-- content end -->
 </div>
 <
