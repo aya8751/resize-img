@@ -105,4 +105,11 @@
   .wrapper{
     width: 100%;
   }
+  .content .row .column label{
+    /* font-size: 1.06rem; */
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -.5px;
+  }
+
 }
