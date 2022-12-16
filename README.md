@@ -14,5 +14,3 @@
 - It returns resized image's in form of `<canvas>` that you can download if press in download button .
 
 ### Made with :heart: 
-
-Enjoy :stuck_out_tongue_winking_eye:
